@@ -34,7 +34,7 @@ exports.myDateTime = function () {
 };
 ```
 `exports` 키워드를 사용하여 모듈 파일 외부에서 사용 가능한 속성 및 메서드로 만들고 "myfirstmodule.js"라는 파일명으로 저장한다.
-
+	
 ## 나만의 모듈을 포함하기
 이제 Node.js 파일에 모듈을 포함하고 사용할 수 있다.
 

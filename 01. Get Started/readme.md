@@ -17,7 +17,7 @@ http.createServer(function (req, res) {
 }).listen(8080);
 ```
 
-이제 사용자의 포트 8080에 액세스하려고 시도하면, 이 코드는 브라우저에 "Hello World!"라고 표시 하도록 지시한다.
+이제 사용자의 포트 8080에 액세스하려고 시도하면, 이 코드는 브라우저에 "Hello World!"라고 표시 하도록 지시한다.	
 
 ## Command Line Interface
 Node.js 파일은 컴퓨터의 CLI 프로그램에서 시작해야한다.

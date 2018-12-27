@@ -39,7 +39,7 @@ http.createServer(function (req, res) {
 }).listen(8080);
 ```
 
-`res.writeHead()` 메소드의 첫 번째 인수는 상태 코드로써, 200은 모두 OK이고 두 번째 인수는 응답 헤더를 포함하는 객체다.
+`res.writeHead()` 메소드의 첫 번째 인수는 상태 코드로써, 200은 모두 OK이고 두 번째 인수는 응답 헤더를 포함하는 객체다.	
 
 ## Query String 읽기
 전달 된 `http.createServer()`함수에는 클라이언트의 요청을 나타내는 객체(http.IncomingMessage)와 같은 `req`인수가 있다.

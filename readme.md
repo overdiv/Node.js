@@ -37,7 +37,7 @@ Node.js는 메모리에 효율적으로 싱글 스레드, 논 블로킹, 비동�
 
 node.js를 이용하여 서버를 구현하는 구조는 아래와 같다.
 ```js
-var http = require('http');
+var http = require('http');	
 
 http.createServer(function (req, res) {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
