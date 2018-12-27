@@ -51,10 +51,10 @@ http.createServer(function (req, res) {
 ```
 모듈을 사용하기 위해 `./`을 사용하였고, 이것은 Node.js파일과 같은 경로에 있다는 것을 의미한다.
 
-위의 코드를 "server.js"파일에 저장하고 파일을 시작한다.
+위의 코드를 "server.js"에 저장하고 파일을 시작한다.
 
 ```
 C:\Users\Your Name>node server.js
 ```
 
-컴퓨터에서 동일한 단계를 수행 한 경우 예제와 동일한 결과가 표시된다. http://localhost:8080
+위와 동일한 단계를 수행 한 경우 예제와 동일한 결과가 표시된다. http://localhost:8080

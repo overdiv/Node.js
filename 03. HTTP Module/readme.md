@@ -17,8 +17,8 @@ var http = require('http');
 
 //create a server object:
 http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  res.end(); //end the response
+	res.write('Hello World!'); //write a response to the client
+	res.end(); //end the response
 }).listen(8080); //the server object listens on port 8080
 ```
 `http.createServer()` 메서드에 전달 된 함수는 누군가가 포트 8080에 액세스하려고 시도 할 때 실행된다.
@@ -33,9 +33,9 @@ HTTP 서버의 응답을 HTML로 표시하려면 올바른 유형의 HTTP 헤더
 ```js
 var http = require('http');
 http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write('Hello World!');
-  res.end();
+	res.writeHead(200, {'Content-Type': 'text/html'});
+	res.write('Hello World!');
+	res.end();
 }).listen(8080);
 ```
 
@@ -44,13 +44,13 @@ http.createServer(function (req, res) {
 ## Query String 읽기
 전달 된 `http.createServer()`함수에는 클라이언트의 요청을 나타내는 객체(http.IncomingMessage)와 같은 `req`인수가 있다.
 
-이 객체에는 "url"이라는 속성이 있다.이 속성은 도메인 이름 뒤에 오는 URL의 일부를 포함한다.
+이 객체에는 `url`이라는 속성이 있다. 이 속성은 도메인 이름 뒤에 오는 URL의 일부를 포함한다.
 ```js
 var http = require('http');
 http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write(req.url);
-  res.end();
+	res.writeHead(200, {'Content-Type': 'text/html'});
+	res.write(req.url);
+	res.end();
 }).listen(8080);
 ```
 
@@ -79,10 +79,10 @@ var http = require('http');
 var url = require('url');
 
 http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  var q = url.parse(req.url, true).query;
-  var txt = q.year + ' ' + q.month;
-  res.end(txt);
+	res.writeHead(200, {'Content-Type': 'text/html'});
+	var q = url.parse(req.url, true).query;
+	var txt = q.year + ' ' + q.month;
+	res.end(txt);
 }).listen(8080);
 ```
 
