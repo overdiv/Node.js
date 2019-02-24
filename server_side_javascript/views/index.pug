@@ -1,0 +1,14 @@
+doctype html
+html(lang='ko')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='ie=edge')
+		meta(name='description' content= description)
+		title= title
+	body
+		h1#h1.title-main hello #{hello_name}
+		p= message
+		ul
+			-for(var i=0; i<5; i++)
+				li conding
+		.time= time

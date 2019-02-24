@@ -2,10 +2,39 @@ const express = require('express');
 const app = express();
 
 // middleware
+app.locals.pretty = true;
 app.use(express.static('public'));
 
+app.set('view engine', 'pug');
+
+app.set('views', './views');
+
 app.get('/', (req, res) => {
-  res.send('Hello Express!');
+	res.render('index', 
+		{
+			title: 'Pug Template', 
+			hello_name : 'Pug template!',
+			message: 'Hello there!',
+			description: 'pug template page',
+			time: Date()
+		}
+	);
+});
+
+app.get('/topic', (req, res) => {
+	const topics = [
+		'Javascript is...',
+		'Nodejs is...',
+		'Express is...'
+	]
+
+	const output = `
+		<a href="/topic?id=0">Javascript</a><br>
+		<a href="/topic?id=1">Nodejs</a><br>
+		<a href="/topic?id=2">Express</a><br>
+		${topics[req.query.id]}
+	`
+	res.send(output);
 });
 
 app.get('/dynamic', (req, res) => {
@@ -38,7 +67,7 @@ app.get('/dynamic', (req, res) => {
 
 app.get('/route', (req, res) => {
 	res.send('route page, <img src="/img/logo_express.png" width="200" alt="nodejs express">')
-})
+});
 
 app.get('/login', (req, res) => {
 	res.send('Login Page');
