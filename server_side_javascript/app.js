@@ -37,6 +37,23 @@ app.get('/topic', (req, res) => {
 	res.send(output);
 });
 
+// semantic url
+app.get('/desc/:name', (req, res) => {
+	const topics = [
+		'Javascript is...',
+		'Nodejs is...',
+		'Express is...'
+	]
+
+	const output = `
+		<a href="/desc/0">Javascript</a><br>
+		<a href="/desc/1">Nodejs</a><br>
+		<a href="/desc/2">Express</a><br>
+		${topics[req.params.name]}
+	`
+	res.send(output);
+});
+
 app.get('/dynamic', (req, res) => {
 	let list = '';
 	for(var i=0; i<5; i++){
